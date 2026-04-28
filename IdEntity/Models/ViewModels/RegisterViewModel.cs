@@ -17,6 +17,7 @@ namespace IdEntity.Models.ViewModels
         [Required]
         public string Adres { get; set; }
         
+        [StringLength(11)]
         [Required]
         public string Telefon { get; set; }
         

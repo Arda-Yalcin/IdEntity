@@ -1,0 +1,30 @@
+@model IdEntity.Models.ViewModels.LoginViewModel
+
+<div class="row justify-content-center">
+    <div class="col-md-6 border p4">
+        <h3>Giriş Ekranı</h3>
+        <form asp-action="Login" asp-controller="Account" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            <div class="row">
+                
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" class="form-control">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Password" class="form-label">Pasword</label>
+                    <input asp-for="Password" class="form-control">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3 form-check">
+                    <input asp-for="RememberMe" class="form-check-input">
+                    <label asp-for="RememberMe" class="form-check-label">Beni Hatırla</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+                
+            </div>
+        </form>
+    </div>
+</div>
