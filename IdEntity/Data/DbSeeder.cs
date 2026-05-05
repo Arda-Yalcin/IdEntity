@@ -24,23 +24,27 @@ namespace IdEntity.Data
                 }
             }
             // varsayılan kullanıcı oluştuır
-            var adminMail="admin@proje.com";
-            var adminUser= await userManager.FindByEmailAsync(adminMail);
+            var adminMail = "admin@proje.com";
+            var adminUser = await userManager.FindByEmailAsync(adminMail);
             if (adminUser == null)
             {
-                var newAdmin=new AppUser
+                var newAdmin = new AppUser
                 {
-                    UserName=adminMail,
-                    Email=adminMail,
-                    Ad="Arda",
-                    Soyad="Yonetici",
-                    EmailConfirmed=true
+                    UserName = adminMail,
+                    Email = adminMail,
+                    Ad = "Arda",
+                    Soyad = "Yonetici",
+                    Adres="İzmir",
+                    Telefon="0555 555 55 55",
+                    EmailConfirmed = true
                 };
-            var createAdmin=await userManager.CreateAsync(adminUser,"Admin123");
+
+                var createAdmin = await userManager.CreateAsync(newAdmin, "Admin123");
                 if (createAdmin.Succeeded)
                 {
-                    await userManager.AddClaimAsync(newAdmin,new Claim("TamAd",newAdmin.Ad+""+newAdmin.Soyad));
+                    await userManager.AddClaimAsync(newAdmin, new Claim("TamAd", newAdmin.Ad + " " + newAdmin.Soyad));
                     await userManager.AddToRoleAsync(newAdmin,"Admin");
+                    Console.WriteLine("Kullanıcı Eklendi");
                 }
             }
         }
