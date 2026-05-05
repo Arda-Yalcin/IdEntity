@@ -11,6 +11,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options=>options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 //-----------IdEntity Ekleme----------------------
 builder.Services.AddIdentity<AppUser,IdentityRole>(options=>{
+    //Şifre politikaları/ayarları
     options.Password.RequireDigit=false;
     options.Password.RequiredLength=3;
     options.Password.RequireUppercase=false;
@@ -42,6 +43,22 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Register}/{id?}")
     .WithStaticAssets();
+using(var scope = app.Services.CreateScope())
+{
+    var services=scope.ServiceProvider;
+    try
+    {
+        await DbSeeder.RoleEkle(services);
+    }
+    catch (System.Exception ex)
+    {
+        
+        Console.WriteLine("Besleme hatası");
 
+    }
+    
+        
+    
+}
 
 app.Run();

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using IdEntity.Models;
 using IdEntity.Models.ViewModels;
@@ -46,14 +47,15 @@ namespace IdEntity.Controllers
             };
             var sonuc =await _userManager.CreateAsync(user,model.Password);
             if (sonuc.Succeeded)
-            {
+            {   
+                await _userManager.AddClaimAsync(user,new Claim("TamAd",user.Ad+" ",user.Soyad));
+                await _userManager.AddToRoleAsync(user,"Member");
                 await _signInManager.SignInAsync(user,isPersistent :false);
                 return RedirectToAction("Index","Home");
             }
             foreach(var hata in sonuc.Errors)
             {
                 ModelState.AddModelError("",hata.Description);
-
             }
             return View(model);
         }

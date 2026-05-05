@@ -1,16 +1,17 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using IdEntity.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace IdEntity.Controllers;
-
+[Authorize]
 public class HomeController : Controller
 {
     public IActionResult Index()
     {
         return View();
     }
-
+    [Authorize(Roles ="Admin")]
     public IActionResult Privacy()
     {
         return View();
