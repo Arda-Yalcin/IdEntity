@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HfwMVVcQl9E=",
+  "dgSpecHash": "W+3kJPsQ080=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lab1\\Documents\\GitHub\\IdEntity\\IdEntity\\IdEntity.csproj",
+  "projectFilePath": "C:\\Users\\Lab1\\Documents\\GitHub\\CdSitesi\\IdEntity\\IdEntity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lab1\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Lab1\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\10.0.7\\microsoft.aspnetcore.identity.entityframeworkcore.10.0.7.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lab1\\Documents\\GitHub\\IdEntity\\IdEntity\\IdEntity.csproj": {}
+    "C:\\Users\\Lab1\\Documents\\GitHub\\CdSitesi\\IdEntity\\IdEntity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lab1\\Documents\\GitHub\\IdEntity\\IdEntity\\IdEntity.csproj": {
+    "C:\\Users\\Lab1\\Documents\\GitHub\\CdSitesi\\IdEntity\\IdEntity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lab1\\Documents\\GitHub\\IdEntity\\IdEntity\\IdEntity.csproj",
+        "projectUniqueName": "C:\\Users\\Lab1\\Documents\\GitHub\\CdSitesi\\IdEntity\\IdEntity.csproj",
         "projectName": "IdEntity",
-        "projectPath": "C:\\Users\\Lab1\\Documents\\GitHub\\IdEntity\\IdEntity\\IdEntity.csproj",
+        "projectPath": "C:\\Users\\Lab1\\Documents\\GitHub\\CdSitesi\\IdEntity\\IdEntity.csproj",
         "packagesPath": "C:\\Users\\Lab1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lab1\\Documents\\GitHub\\IdEntity\\IdEntity\\obj\\",
+        "outputPath": "C:\\Users\\Lab1\\Documents\\GitHub\\CdSitesi\\IdEntity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
